@@ -28,7 +28,7 @@
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
 // Paste only the Supabase Project URL and publishable/anon key here.
 // NEVER paste a service_role key into frontend code.
-const SUPABASE_URL = 'NEXT_PUBLIC_SUPABASE_URL=https://dmfmwfsnnweoeubopwpm.supabase.co';
+const SUPABASE_URL = 'https://dmfmwfsnnweoeubopwpm.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_60p_rHYYz_cP_Ie1EC3kiA_0i4RdWIO';
 const configured = SUPABASE_URL.startsWith('https://') && !SUPABASE_URL.includes('PASTE_') && !SUPABASE_ANON_KEY.includes('PASTE_');
 const sb = configured ? createClient(SUPABASE_URL,SUPABASE_ANON_KEY) : null;
