@@ -30,7 +30,7 @@ import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js
 // NEVER paste a service_role key into frontend code.
 const SUPABASE_URL = 'https://dmfmwfsnnweoeubopwpm.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_60p_rHYYz_cP_Ie1EC3kiA_0i4RdWIO';
-const configured = SUPABASE_URL.startsWith('https://') && !SUPABASE_URL.includes('PASTE_') && !SUPABASE_ANON_KEY.includes('PASTE_');
+const configured = SUPABASE_URL.startsWith('https://') && SUPABASE_URL.includes('.supabase.co') && SUPABASE_ANON_KEY.startsWith('sb_publishable_');
 const sb = configured ? createClient(SUPABASE_URL,SUPABASE_ANON_KEY) : null;
 window.view = id => { document.querySelectorAll('.view').forEach(x=>x.classList.remove('active')); document.getElementById(id).classList.add('active'); window.scrollTo(0,0); };
 function msg(id,s){document.getElementById(id).textContent=s}
